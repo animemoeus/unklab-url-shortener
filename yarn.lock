@@ -764,13 +764,13 @@
   dependencies:
     "@babel/runtime" "^7.17.2"
 
-"@mui/lab@^5.0.0-alpha.93":
-  version "5.0.0-alpha.93"
-  resolved "https://registry.yarnpkg.com/@mui/lab/-/lab-5.0.0-alpha.93.tgz#b0a1662ae478e791f083fdf49143766b890671e6"
+"@mui/lab@^5.0.0-alpha.94":
+  version "5.0.0-alpha.94"
+  resolved "https://registry.yarnpkg.com/@mui/lab/-/lab-5.0.0-alpha.94.tgz#6cc1d0221977740a4055ecc5d0d665b214760ca2"
   dependencies:
     "@babel/runtime" "^7.17.2"
     "@mui/base" "5.0.0-alpha.92"
-    "@mui/system" "^5.9.3"
+    "@mui/system" "^5.10.0"
     "@mui/utils" "^5.9.3"
     clsx "^1.2.1"
     prop-types "^15.8.1"
@@ -809,7 +809,7 @@
     csstype "^3.1.0"
     prop-types "^15.8.1"
 
-"@mui/system@^5.10.0", "@mui/system@^5.9.3":
+"@mui/system@^5.10.0":
   version "5.10.0"
   resolved "https://registry.yarnpkg.com/@mui/system/-/system-5.10.0.tgz#48daf4aa8e61424c232378acb27a735abfb1fcc1"
   dependencies:
