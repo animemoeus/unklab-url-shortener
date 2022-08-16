@@ -69,7 +69,7 @@ export default function Index(props) {
           toast({
             description: "Tautan baru telah disalin ke clipboard.",
             status: "success",
-            duration: 3000,
+            duration: 5000,
             isClosable: true,
             position: "top-right",
           });
@@ -87,7 +87,7 @@ export default function Index(props) {
         toast({
           description: "Server sedang main tenis 🙃",
           status: "info",
-          duration: 2000,
+          duration: 3000,
           isClosable: true,
           position: "top-right",
         });
