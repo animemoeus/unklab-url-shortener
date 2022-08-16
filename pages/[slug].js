@@ -10,7 +10,7 @@ export default function Slug(props) {
 export async function getServerSideProps(context) {
   // get the target URL from API
   const res = await fetch(
-    `https://uus.animemoe.us/api/shorten/?slug=${context.params.slug}`
+    `https://url-shortener-api.unklab.fun/api/shorten/?slug=${context.params.slug}`
   );
   const errorCode = res.ok ? false : res.status;
   const data = await res.json();
