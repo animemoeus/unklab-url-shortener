@@ -5,7 +5,6 @@ import React, { useState } from "react";
 import Contributors from "../components/organisms/Contributors";
 
 import copy from "copy-to-clipboard";
-import cookie from "cookie";
 
 import { useToast } from "@chakra-ui/react";
 import {
@@ -24,7 +23,7 @@ import {
 
 export default function Index(props) {
   const toast = useToast();
-  const user = props.user;
+  const user = null;
 
   const [isLoading, setIsloading] = useState(false);
   const [inputUrl, setInputUrl] = useState("");
@@ -124,7 +123,7 @@ export default function Index(props) {
         <title>🔥 Unklab URL Shortener</title>
       </Head>
 
-      <Navbar user={user} />
+      <Navbar user={null} />
 
       <Box px={4} py={32} mx="auto">
         <Box
@@ -208,44 +207,4 @@ export default function Index(props) {
       <Footer />
     </>
   );
-}
-
-export async function getServerSideProps(context) {
-  const data = {};
-
-  // get the cookies from web browser
-  if ("cookie" in context.req.headers) {
-    const parsedCookies = cookie.parse(context.req.headers.cookie);
-
-    if ("token" in parsedCookies) {
-      // get the jwt
-      data["token"] = parsedCookies.token;
-    } else {
-      data["token"] = "";
-    }
-  }
-
-  // check if jwt is valid
-  const myHeaders = new Headers();
-  myHeaders.append("Authorization", `Bearer ${data["token"]}`);
-  var requestOptions = {
-    method: "POST",
-    headers: myHeaders,
-    redirect: "follow",
-  };
-
-  const res = await fetch(
-    `${process.env.rootApiEndpoint}/api/account/validate-jwt/`,
-    requestOptions
-  );
-  const response = await res.json();
-
-  if (response.success === true) {
-    // redirect to home page if the user is authenticated
-    return {
-      props: { user: response.user },
-    };
-  } else {
-    return { props: { user: null } };
-  }
 }

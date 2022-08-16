@@ -53,7 +53,7 @@ export default function Gslr(props) {
               color="brand.500"
               display={{ base: "none", md: "inline-flex" }}
             >
-              {user === null && (
+              {/* {user === null && (
                 <>
                   <Link href="/login">
                     <a>
@@ -79,7 +79,7 @@ export default function Gslr(props) {
                     </a>
                   </Link>
                 </>
-              )}
+              )} */}
             </HStack>
             <Box display={{ base: "inline-flex", md: "none" }}>
               <IconButton
@@ -111,7 +111,7 @@ export default function Gslr(props) {
                   aria-label="Close menu"
                   onClick={mobileNav.onClose}
                 />
-                {user === null && (
+                {/* {user === null && (
                   <>
                     <Link href="/login">
                       <a>
@@ -142,7 +142,7 @@ export default function Gslr(props) {
                       </a>
                     </Link>
                   </>
-                )}
+                )} */}
               </VStack>
             </Box>
           </HStack>
