@@ -16,7 +16,7 @@
     "@mui/material": "^5.10.8",
     "@mui/lab": "^5.0.0-alpha.102",
     "animate.css": "^4.1.1",
-    "axios": "^1.0.0",
+    "axios": "^1.1.2",
     "bootstrap": "5.2.2",
     "cookie": "^0.5.0",
     "copy-to-clipboard": "^3.3.1",
